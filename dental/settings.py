@@ -129,13 +129,15 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
+
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-EMAIL_HOST = 'smtp.google.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'onagydentalproject@gmail.com'
-EMAIL_HOST_PASSWORD = 'Django123'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False 
+EMAIL_PORT = 587
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
+DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 
 django_heroku.settings(locals())
