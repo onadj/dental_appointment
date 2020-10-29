@@ -134,7 +134,7 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 EMAIL_HOST = 'smtp.google.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'onagydentalproject@gmail.com'
-EMAIL_HOST_PASSWORD = 'pass'
+EMAIL_HOST_PASSWORD = 'Django123'
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False 
 
