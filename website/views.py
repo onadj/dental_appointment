@@ -9,7 +9,7 @@ def home(request):
 def contact(request):
     if request.method == "POST":
         message_name = request.POST['message-name']
-        message_email = request.POST['message-email']
+        message_name1 = request.POST['message-name1']
         message = request.POST['message']
 
         send_mail(
