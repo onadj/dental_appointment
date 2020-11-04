@@ -13,25 +13,18 @@ def contact(request):
         message = request.POST['message']
 
         send_mail(
-            'message_name', # subject
-            'message', #  message
-            'message_email', # from email
-            ['onagydentalproject@gmail.com'], # to email
+            'message_name',
+            'message',
+            'message_email',
+            ['onagydentalproject@gmail.com'],
             fail_silently=False,
         )
         return render(request, 'contact.html', {'message_name ': message_name})
     else:
         return render(request, 'contact.html', {})
 
-
 def about(request):
     return render(request, 'about.html', {})
-
-def blogdetails(request):
-    return render(request, 'blogdetails.html', {})
-
-def blog(request):
-    return render(request, 'blog.html', {})
 
 def pricing(request):
     return render(request, 'pricing.html', {})

@@ -77,7 +77,6 @@
               <div class="classycloseIcon">
                 <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
               </div>
-
               <!-- Nav Start -->
               <div class="classynav">
                 <ul id="nav">
@@ -88,35 +87,13 @@
                       <li><a href="{% url 'about' %}">- About Us</a></li>
                       <li><a href="{% url 'service' %}">- Service</a></li>
                       <li><a href="{% url 'pricing' %}">- Pricing</a></li>
-                      <li><a href="{% url 'blog' %}">- Blog</a></li>
-                      <li><a href="{% url 'blogdetails' %}">- Blog Details</a></li>
                       <li><a href="{% url 'contact' %}">- Contact</a></li>
-                      <li><a href="#">- Dropdown</a>
-                        <ul class="dropdown">
-                          <li><a href="#">- Dropdown Item</a></li>
-                          <li><a href="#">- Dropdown Item</a>
-                            <ul class="dropdown">
-                              <li><a href="#">- Even Dropdown</a></li>
-                              <li><a href="#">- Even Dropdown</a></li>
-                              <li><a href="#">- Even Dropdown</a></li>
-                              <li><a href="#">- Even Dropdown</a></li>
-                            </ul>
-                          </li>
-                          <li><a href="#">- Dropdown Item</a></li>
-                          <li><a href="#">- Dropdown Item</a></li>
-                        </ul>
-                      </li>
+                      
                     </ul>
                   </li>
                   <li><a href="{% url 'about' %}">About</a></li>
                   <li><a href="{% url 'service' %}">Service</a></li>
                   <li><a href="{% url 'pricing' %}">Pricing</a></li>
-                  <li><a href="{% url 'blog' %}">Blog</a>
-                    <ul class="dropdown">
-                      <li><a href="{% url 'blog' %}">- Blog</a></li>
-                      <li><a href="{% url 'blogdetails' %}">- Blog Details</a></li>
-                    </ul>
-                  </li>
                   <li><a href="{% url 'contact' %}">Contact</a></li>
                 </ul>
               </div>
@@ -124,7 +101,7 @@
             </div>
 
             <!-- Booking Now Button -->
-            <a href="#" class="btn dento-btn booking-btn">Booking Now</a>
+            
           </nav>
         </div>
       </div>
@@ -148,7 +125,7 @@
         <div class="col-12">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+              <li class="breadcrumb-item"><a href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a></li>
               <li class="breadcrumb-item active" aria-current="page">About Us</li>
             </ol>
           </nav>
