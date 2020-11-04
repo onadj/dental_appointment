@@ -8,14 +8,15 @@ def home(request):
 
 def contact(request):
     if request.method == "POST":
-        message_name = request.POST['message-name']
         message_email = request.POST['message-email']
         message = request.POST['message']
+        message_name = request.POST['message-name']
+        
 
         send_mail(
-            message_name,
             message_email,
             message,
+            message_name,
             ['onagydentalproject@gmail.com'],
             fail_silently=False,
         )
