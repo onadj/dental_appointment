@@ -15,8 +15,8 @@ def contact(request):
         send_mail(
             message_name,
             message,
-            message_email,
-            ['message_email'],
+            message_name1,
+            ['onagydentalproject@gmail.com],
             fail_silently=False,
         )
         return render(request, 'contact.html', {'message_name ': message_name})
