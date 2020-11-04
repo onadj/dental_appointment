@@ -19,7 +19,7 @@ def contact(request):
             ['onagydentalproject@gmail.com'],
             fail_silently=False,
         )
-        return render(request, 'contact.html', {'message_name'})
+        return render(request, 'contact.html', {'message_name ': message_name})
     else:
         return render(request, 'contact.html', {})
 
