@@ -9,16 +9,17 @@ def home(request):
 def contact(request):
     if request.method == "POST":
         message_name = request.POST['message-name']
-        message_name1 = request.POST['message-name1']
+        message_email = request.POST['message-email']
         message = request.POST['message']
 
         send_mail(
             message_name,
+            message_email,
             message,
-            message_name1,
-            ['onagydentalproject@gmail.com],
+            ['onagydentalproject@gmail.com'],
             fail_silently=False,
         )
+        
         return render(request, 'contact.html', {'message_name ': message_name})
     else:
         return render(request, 'contact.html', {})
