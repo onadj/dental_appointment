@@ -13,12 +13,14 @@ def contact(request):
         message = request.POST['message']
 
         send_mail(
-            'message-name',
-            'message',
-            'message-email',
+            message_name,
+            message,
+            message_email,
             ['onagydentalproject@gmail.com'],
             fail_silently=False,
         )
+        return render(request, 'contact.html', {'message_name'})
+    else:
         return render(request, 'contact.html', {})
 
 def about(request):
