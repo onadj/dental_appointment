@@ -10,13 +10,13 @@ def contact(request):
     if request.method == "POST":
         message_name = request.POST['message-name']
         message_email = request.POST['message-email']
-        message = request.POST['message', 'message-email']
+        message = request.POST['message']
 
         send_mail(
             message_name,
             message,
             message_email,
-            ['onagydentalproject@gmail.com'],
+            ['message_email'],
             fail_silently=False,
         )
         return render(request, 'contact.html', {'message_name ': message_name})
