@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
+from django.conf import settings
+from django.contrib import messages
 
 # Create your views here.
 
@@ -11,7 +13,10 @@ def contact(request):
         message_email = request.POST['message-email']
         message = request.POST['message']
         message_name = request.POST['message-name']
-        
+
+        messages.success(request, 'Thanks \
+                We recived your email and will contact you shortly.')
+
         send_mail(
             message_email,
             message,
