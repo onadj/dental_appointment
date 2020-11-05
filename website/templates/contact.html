@@ -139,18 +139,15 @@
   <br>
   <!-- ***** Breadcrumb Area End ***** -->
 {% if messages %}
- <div class="container text-center">
-      <div class="row">
-        <div class="col-12">
-<ul class="messages">
+ 
+{% if messages %}
+<ul class="messages text-center">
     {% for message in messages %}
-    <li style="color:green">{% if message.tags %} class="{{ message.tags }}"{% endif %}> {{ message }}</li>
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
     {% endfor %}
 </ul>
 {% endif %}
-        </div>
-      </div>
- </div>
+
   <!-- ***** Contact Area Start ***** -->
   <section class="dento-contact-area mt-50 mb-100">
     <div class="container">
