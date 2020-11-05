@@ -15,7 +15,7 @@ def contact(request):
         message_name = request.POST['message-name']
 
         messages.success(request, 'Thanks \
-                We recived your email and will contact you shortly.')
+                we recived your email and will contact you shortly.')
 
         send_mail(
             message_email,
