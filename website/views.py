@@ -12,7 +12,6 @@ def contact(request):
         message = request.POST['message']
         message_name = request.POST['message-name']
         
-
         send_mail(
             message_email,
             message,

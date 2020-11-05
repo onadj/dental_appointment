@@ -175,7 +175,7 @@
               <div class="line"></div>
             </div>
             <!-- Form -->
-            <form id= "myForm" action="#" method="post">
+            <form action="#" method="post">
             {% csrf_token %}
               <div class="row">
                 <div class="col-lg-6">
@@ -315,16 +315,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   <!-- Active js -->
   <script src="{% static 'website/js/default-assets/active.js' %}"></script>
 
-<script>
-   const myForm = document.getElementById("myForm");
-   myForm.addEventListener("submit", (e) => {
-       e.preventDefault();
 
-       alert("Thanks, we received your email and will contact you shortly.")
-
-   })
-
-</script>
 </body>
 
 </html>
