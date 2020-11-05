@@ -139,10 +139,10 @@
   <br>
   <!-- ***** Breadcrumb Area End ***** -->
 {% if messages %}
-<ul class="messages text-center" style="color:blue">
+<ul class="messages text-center" style="color:green">
     {% for message in messages %}
-   <h3>{% if message.tags %} class="{{ message.tags }}"{% endif %}
-     {{ message }}</h3>
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+    {{ message_name }} {{ message }}</li>
     {% endfor %}
 </ul>
 {% endif %}
