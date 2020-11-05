@@ -176,7 +176,7 @@
             </div>
             <!-- Form -->
 
-{% if message_name %}
+
 
             <form action="#" method="post">
             {% csrf_token %}
@@ -190,6 +190,7 @@
                 <div class="col-12">
                   <textarea name="message" class="form-control mb-30" placeholder="Your Message"></textarea>
                 </div>
+                
                 <div class="col-12">
                   <button type="submit" class="btn dento-btn">Send Message</button>
                 </div>
@@ -200,6 +201,7 @@
         </div>
       </div>
     </div>
+{% if message_name %}
 <h3 class="text-center">Thanks{{ message_name }}</h3>
 <br>
 <p class="text-center">We recived your email and will contact you shortly.</p>
