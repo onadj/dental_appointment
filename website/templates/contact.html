@@ -175,6 +175,9 @@
               <div class="line"></div>
             </div>
             <!-- Form -->
+
+{% if message_name %}
+
             <form action="#" method="post">
             {% csrf_token %}
               <div class="row">
@@ -197,6 +200,10 @@
         </div>
       </div>
     </div>
+<h3 class="text-center">Thanks{{ message_name }}</h3>
+<br>
+<p class="text-center">We recived your email and will contact you shortly.</p>
+{% endif %}
   </section>
   <!-- ***** Contact Area End ***** -->
 
