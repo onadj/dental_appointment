@@ -342,10 +342,12 @@
             <h5 class="widget-title">Newsletter</h5>
 
             <p>We will send out weekly newest article and some great offers</p>
-            <!-- Newsletter Form -->
+             <!-- Newsletter Form -->
             <div class="footer-newsletter-form">
+             
               <form action="#" method="post">
-                <input type="email" name="nl-email" value="" placeholder="Email Address">
+              {% csrf_token %}
+                <input type="email" name="message-email" value="" placeholder="Email Address">
                 <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
               </form>
             </div>
