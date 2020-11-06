@@ -6,7 +6,18 @@ from django.contrib import messages
 # Create your views here.
 
 def home(request):
-    return render(request, 'home.html', {})
+        if request.method == "POST":
+        message_email = request.POST['message-email']
+
+        messages.info(request, 'You suscribed on our Newsletter.')
+        
+        send_mail(
+            message_email,
+            ['onagydentalproject@gmail.com'],
+            fail_silently=False,
+        )
+        return render(request, 'home.html', {})
+        
 
 def contact(request):
     if request.method == "POST":
@@ -17,7 +28,7 @@ def contact(request):
         messages.success(request, 'Thanks \
                 we recived your email and will contact you shortly.')
         messages.info(request, 'You suscribed on our Newsletter.')
-        
+
         send_mail(
             message_email,
             message,
