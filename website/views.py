@@ -7,9 +7,8 @@ from django.contrib import messages
 
 def home(request):
         if request.method == "POST":
-        message_email = request.POST['message-email']
-
-        messages.info(request, 'You suscribed on our Newsletter.')
+            message_email = request.POST['message-email']
+            messages.info(request, 'You suscribed on our Newsletter.')
         
         send_mail(
             message_email,
@@ -27,7 +26,6 @@ def contact(request):
 
         messages.success(request, 'Thanks \
                 we recived your email and will contact you shortly.')
-        messages.info(request, 'You suscribed on our Newsletter.')
 
         send_mail(
             message_email,
