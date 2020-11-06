@@ -657,14 +657,7 @@
                 <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
               </form>
             </div>
-            {% if messages %}
-<ul class="messages text-center text-info">
-    {% for message in messages %}
-    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>
-     {{ message }}</li>
-    {% endfor %}
-</ul>
-{% endif %}
+            
             <!-- Social Info -->
             <div class="footer-social-info">
               <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
