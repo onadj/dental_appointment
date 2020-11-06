@@ -142,7 +142,7 @@
 <ul class="messages text-center text-info">
     {% for message in messages %}
     <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>
-    {{ message_name }} {{ message }}</li>
+     {{ messages.success }}</li>
     {% endfor %}
 </ul>
 {% endif %}

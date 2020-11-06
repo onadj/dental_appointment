@@ -647,14 +647,23 @@
             <h5 class="widget-title">Newsletter</h5>
 
             <p>We will send out weekly newest article and some great offers</p>
+
             <!-- Newsletter Form -->
             <div class="footer-newsletter-form">
+             {% csrf_token %}
               <form action="#" method="post">
-                <input type="email" name="nl-email" value="" placeholder="Email Address">
+                <input type="email" name="message-email" value="" placeholder="Email Address">
                 <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
               </form>
             </div>
-
+            {% if messages %}
+<ul class="messages text-center text-info">
+    {% for message in messages %}
+    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>
+     {{ messages.info }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
             <!-- Social Info -->
             <div class="footer-social-info">
               <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
