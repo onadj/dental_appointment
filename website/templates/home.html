@@ -650,8 +650,9 @@
 
             <!-- Newsletter Form -->
             <div class="footer-newsletter-form">
-             {% csrf_token %}
+             
               <form action="#" method="post">
+              {% csrf_token %}
                 <input type="email" name="message-email" value="" placeholder="Email Address">
                 <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
               </form>
