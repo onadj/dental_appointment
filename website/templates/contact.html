@@ -138,14 +138,6 @@
   </div>
   <br>
   <!-- ***** Breadcrumb Area End ***** -->
-{% if messages %}
-<ul class="messages text-center text-info">
-    {% for message in messages %}
-    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>
-    {{ message }}</li>
-    {% endfor %}
-</ul>
-{% endif %}
   <!-- ***** Contact Area Start ***** -->
   <section class="dento-contact-area mt-50 mb-100">
     <div class="container">
